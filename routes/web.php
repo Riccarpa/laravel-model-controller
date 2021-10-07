@@ -13,19 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/','HomeController@index')->name('home');
 
-
-
-
-    $title = 'MyBooks';
-    return view('home',compact('title'));
-})->name('home');
-
-Route::get('/books', function () {
-
-    $books = [];
-
-    return view('books.index',compact('books'));
-})->name('books.index');
+Route::get('/movies','MovieController@index')->name('movies.index');
 
